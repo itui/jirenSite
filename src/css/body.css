@@ -1,0 +1,274 @@
+
+#title{
+    color: #C9EB48
+}  
+
+.parallax {
+    /* The image used */
+    background-image: url("../image/home.jpg");
+  
+    /* Set a specific height */
+    min-height: 700px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  }
+  .parallax_one {
+    /* The image used */
+    background-image: url("../image/home.jpg");
+  
+    /* Set a specific height */
+    min-height: 700px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  }
+
+  /* SEARCH BOX */
+ 
+
+  /* TEXT FILL ANIMATION  */
+  h6{
+      position: absolute;      
+      font-size: 5em; 
+      color: #ccc;
+  }
+  h1 { 
+    /* margin: 0; 
+    padding: 0;  */
+    /* position: relative;  */
+    top: 50%; 
+    left: 50%; 
+    font-size: 5em; 
+    color: #ccc; 
+} 
+
+h1::before { 
+    /* This will create the layer 
+       over original text*/ 
+    content: attr(data-text); 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+
+    /* Setting different color than 
+       that of original text  */ 
+    color: green; 
+    overflow: hidden; 
+
+    /* Setting width as 0*/ 
+    width: 0%; 
+    transition: 1s; 
+} 
+
+h1:hover::before { 
+
+    /* Setting width to 100 on hover*/ 
+    width: 100%; 
+}
+/* circle on hover style 
+ */
+button{
+    background-color: #C9EB48;
+}
+
+/* TEXT SLIDER CSS  */
+.item-1, 
+.item-2, 
+.item-3, 
+.item-4 {
+position: absolute;
+  display: block;
+	top: 15em;  
+  width: 60%;
+font-size: 2em;
+/* margin-top: 300px; */
+	animation-duration: 20s;
+	animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    color: #8BC34A;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}   
+.item-1{
+	animation-name: anim-1;
+}
+
+.item-2{
+	animation-name: anim-2;
+}
+
+.item-3{
+	animation-name: anim-3;
+}
+/* .item-4{
+    animation-name: anim-2;
+    animation-name: anim-1;
+	animation-name: anim-3;
+} */
+
+@keyframes anim-1 {
+	0%, 8.3% { left: -100%; opacity: 0; }
+  8.3%,25% { left: 25%; opacity: 1; }
+  33.33%, 100% { left: 110%; opacity: 0; }
+}
+
+@keyframes anim-2 {
+	0%, 33.33% { left: -100%; opacity: 0; }
+  41.63%, 58.29% { left: 25%; opacity: 1; }
+  66.66%, 100% { left: 110%; opacity: 0; }
+}
+
+@keyframes anim-3 {
+	0%, 66.66% { left: -100%; opacity: 0; }
+  74.96%, 91.62% { left: 25%; opacity: 1; }
+  100% { left: 110%; opacity: 0; }
+}
+
+/* GET STRATRED Button */
+.btn {
+    line-height: 50px;
+    height: 50px;
+    text-align: center;   
+    
+    width: 250px;
+    cursor: pointer;
+}
+.btn-one {
+    color: #727272;
+    transition: all 0.3s;
+    position: relative;
+    text-decoration: bold;
+    text-shadow: #8BC34A;
+}
+.btn-one span {
+    transition: all 0.3s;
+}
+.btn-one::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: #C9EB48;
+    border-bottom-color: #C9EB48;
+    transform: scale(0.1, 1);
+}
+.btn-one:hover span {
+    letter-spacing: 2px;
+}
+.btn-one:hover::before {
+    opacity: 1; 
+    transform: scale(1, 1); 
+}
+.btn-one::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.3s;
+    /* background-color: #8BC34A; */
+}
+.btn-one:hover::after {
+    opacity: 0; 
+    transform: scale(0.1, 1);
+}
+
+/* THE SERACH BOX  */
+#search {
+    -webkit-appearance: none;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    width: 24px;
+    padding: 0 10px;
+    height: 24px;
+    font-size: 14px;
+    color: #666;
+    line-height: 24px;
+    border: 0;
+    border-radius: 50px;
+    box-shadow: 0 0 0 1px #8BC34A, inset 0 2px 5px #8BC34A, 0 2px 0 rgba(255,255,255,.6);
+    position: relative;
+    z-index: 5;
+    -webkit-transition: .3s ease;
+    -moz-transition: .3s ease;
+}
+
+#search:focus {
+    outline: none;
+    width: 180px;
+}
+
+p.s {
+    z-index: 4;
+    position: relative;
+    padding: 5px;
+    line-height: 0;
+    border-radius: 100px;
+    background: #8BC34A;
+    background-image: -webkit-linear-gradient(#8BC34A,#8BC34A);
+    background-image: -moz-linear-gradient(#8BC34A,#8BC34A);
+    display: inline-block;
+    box-shadow: inset 0 1px 0 #8BC34A, 0 2px 5px #8BC34A;
+}
+
+p.s:hover {
+    box-shadow: inset 0 1px 0 #8BC34A, 0 2px 3px 2px #8BC34A;
+}
+
+p.s:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 5px;
+    height: 20px;
+    background: #8BC34A;
+    bottom: -10px;
+    right: -3px;
+    border-radius: 0 0 5px 5px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    box-shadow: inset 0 -1px 0 rgbA(255,255,255,.6), -2px 2px 2px #8BC34A;
+}
+
+p.s:hover:after {
+    box-shadow: inset 0 -1px 0 rgba(255,255,255,.6), -2px 2px 2px 1px #8BC34A;
+}
+
+/* from box to circle animation  */
+
+.sec1-right{
+    position: relative;
+    width: 50%;
+    float: right;
+    box-sizing: border-box;
+    min-height: 600px;
+    margin-top:386px;
+}
+
+
+/* first section animation */
+.dot {
+    height: 100px;
+    width: 100px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+  }
